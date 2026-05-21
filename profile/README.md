@@ -19,6 +19,57 @@ We build on the right side of that gap.
 
 ---
 
+## The system at a glance
+
+Four layers. Raw signals feed a **corpus layer** — the moat. Thin **surfaces** ride on the corpus. The surfaces generate **revenue**. The corpus is the product; the newsletters, bots, and APIs are only where it surfaces. Own the corpus, rent distribution until the audience exists.
+
+```mermaid
+flowchart TB
+  SIG["Raw signals<br/>RSS · Reddit · Google rising · TikTok · Places · filings · options · surveys"]
+
+  subgraph CORPUS["Corpus layer — the moat"]
+    direction LR
+    TC["trend-corpus<br/>what is happening"]
+    SC["swell-checker<br/>what is rising"]
+    AC["audience-corpus<br/>who you are talking to · planned"]
+  end
+
+  subgraph SURFACES["Surfaces — thin layers on the corpus"]
+    direction LR
+    FS["Foreshore"]
+    CV["Convergence Daily"]
+    TB["trading book + scanner"]
+    BG["business-guy"]
+    API["MCP / API"]
+  end
+
+  REV["Revenue<br/>subscriptions · trading P&L · research fees · API access · ventures"]
+
+  SIG --> TC
+  SIG --> SC
+  SIG --> AC
+  SC --> FS
+  TC --> CV
+  TC --> TB
+  TC --> API
+  SC --> API
+  AC -. render for cohort .-> FS
+  AC -. render for cohort .-> CV
+  AC -. target .-> BG
+  FS -. idea .-> BG
+  CV -. idea .-> BG
+  TB -. provenance .-> CV
+  FS --> REV
+  CV --> REV
+  TB --> REV
+  BG --> REV
+  API --> REV
+```
+
+The moat is never any single newsletter or bot — it is the corpus every surface rides on. Signals deepen the corpus, the corpus feeds the surfaces, the surfaces grow an audience and throw off ideas, and that funds wider signal coverage. Compounding, by construction.
+
+---
+
 ## Trading + signal intelligence
 
 **[trend-corpus](https://github.com/P-U-C/trend-corpus)** — the public sector-corpus  
@@ -29,6 +80,22 @@ The private trading runtime. Convergence merger, catalyst calendar, mispricing d
 
 **[trend-intel-private](https://github.com/P-U-C/trend-intel-private)** — semi-private bridge  
 Sanitized claim text, entity-to-ticker exposure, opportunity rows. The layer between live private runtimes and the public scanner artifact contract.
+
+---
+
+## Consumer + editorial distribution
+
+**[swell-checker](https://github.com/P-U-C/swell-checker)** — consumer / health trend discovery
+Velocity + spread + vocabulary scoring across RSS, Reddit, Google rising, TikTok, and Places. Operator-gated proposals. The "what is rising" corpus.
+
+**[editorial](https://github.com/P-U-C/editorial)** — the publishing layer *(private)*
+Two products on top of the corpuses. **Foreshore** — health-sector trend intelligence, for operators who want the shape of a thing before their peers do. **Convergence Daily** — cross-sector market intelligence, synthesized from the sector corpuses and the scanner. Every issue ships twice: a human story and a machine-readable JSON artifact.
+
+**[business-guy](https://github.com/P-U-C/business-guy)** — opportunity research + outreach *(private)*
+Takes the business and trade ideas the corpus surfaces and researches them — market size, incumbents, feasibility — turning a one-line read into a validated brief.
+
+**audience-corpus** *(planned)* — the third corpus: who you are talking to
+A living corpus of each demographic cohort's fears, hopes, drivers, and language, exposed as composable targeting infrastructure. Horizontal — it feeds both the editorial surfaces and business-guy.
 
 ---
 
