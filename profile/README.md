@@ -2,6 +2,10 @@
 
 Building the intelligence layer.
 
+<!-- STATUS:START -->
+**System status:** 🔴 action needed · updated 2026-05-26 20:47 UTC
+<!-- STATUS:END -->
+
 ---
 
 The permanent underclass debates whether AI will take their jobs.  
