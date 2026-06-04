@@ -42,6 +42,7 @@ flowchart TB
     direction LR
     FS["Foreshore"]
     CV["Convergence Daily"]
+    ENG["convergence-hq<br/>dual-publishing engine<br/>The Brief + The Signal"]
     TB["trading book + scanner"]
     BG["business-guy"]
     API["MCP / API"]
@@ -57,6 +58,8 @@ flowchart TB
   TC --> TB
   TC --> API
   SC --> API
+  CV --> ENG
+  ENG --> API
   AC -. render for cohort .-> FS
   AC -. render for cohort .-> CV
   AC -. target .-> BG
@@ -94,6 +97,9 @@ Velocity + spread + vocabulary scoring across RSS, Reddit, Google rising, TikTok
 
 **[editorial](https://github.com/P-U-C/editorial)** — the publishing layer *(private)*
 Two products on top of the corpuses. **Foreshore** — health-sector trend intelligence, for operators who want the shape of a thing before their peers do. **Convergence Daily** — cross-sector market intelligence, synthesized from the sector corpuses and the scanner. Every issue ships twice: a human story and a machine-readable JSON artifact.
+
+**[convergence-hq/convergence](https://github.com/convergence-hq/convergence)** — the dual-publishing engine
+Read by humans, cited by machines. One canonical object compiles into two coordinated surfaces: **The Brief** (a fast human reading site) and **The Signal** (an immutable, content-addressed, cryptographically signed JSON object that agents can cite *and verify*). Convergence Daily is the first publication wired through it; the engine is forkable, so any publication can adopt the same dual-native contract.
 
 **[business-guy](https://github.com/P-U-C/business-guy)** — opportunity research + outreach *(private)*
 Takes the business and trade ideas the corpus surfaces and researches them — market size, incumbents, feasibility — turning a one-line read into a validated brief.
