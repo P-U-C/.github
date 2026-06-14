@@ -3,7 +3,7 @@
 Building the intelligence layer.
 
 <!-- STATUS:START -->
-**System status:** 🟡 attention needed · updated 2026-06-13 21:45 UTC
+**System status:** 🟡 attention needed · updated 2026-06-14 21:45 UTC
 <!-- STATUS:END -->
 
 ---
