@@ -104,6 +104,9 @@ Read by humans, cited by machines. One canonical object compiles into two coordi
 **[business-guy](https://github.com/P-U-C/business-guy)** — opportunity research + outreach *(private)*
 Takes the business and trade ideas the corpus surfaces and researches them — market size, incumbents, feasibility — turning a one-line read into a validated brief.
 
+**[wellness-radar](https://github.com/P-U-C/wellness-radar)** — Metro Vancouver wellness market-intelligence console
+A vertical surface: map-first operator map + live signal feed + people graph + white-space/opportunity analytics for the Metro Vancouver wellness economy, lead wedge recovery / contrast therapy. Source-backed public data only, BC-geo-gated, with provenance and freshness on every record. The pattern is forkable to any city + sector.
+
 **audience-corpus** *(planned)* — the third corpus: who you are talking to
 A living corpus of each demographic cohort's fears, hopes, drivers, and language, exposed as composable targeting infrastructure. Horizontal — it feeds both the editorial surfaces and business-guy.
 
