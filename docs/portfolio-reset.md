@@ -50,4 +50,4 @@ The reset is complete when a new contributor can understand P-U-C in under five 
 
 ## Tracking
 
-The public tracking issue for this work will link the concrete decisions and pull requests as they land. Detailed operational inventory and private system evidence remain private by design.
+This charter and its related pull requests record the concrete decisions as they land. Repository issues are disabled here, so the portfolio decision log will live in reviewed documentation until a public project board is deliberately enabled. Detailed operational inventory and private system evidence remain private by design.
