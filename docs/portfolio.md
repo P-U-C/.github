@@ -129,7 +129,8 @@ The default is `main`. Declared exceptions:
 | Repository | Branch | Note |
 | --- | --- | --- |
 | b1e55ed | `develop` | Git-flow; paused. |
-| duplicate-task-suppression, outstanding-queue-reconciliation, reward-artifact-coverage-audit | `master` | Archived; not worth changing. |
+| eliza | `develop` | Upstream's default; fork retention. |
+| duplicate-task-suppression, outstanding-queue-reconciliation, reward-artifact-coverage-audit, langchain | `master` | Archived; not worth changing. |
 
 ## Incident: permanentupperclass.com returns 526
 
