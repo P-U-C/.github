@@ -1,159 +1,40 @@
 # Permanent Upper Class
 
-Building the intelligence layer.
-
 <!-- STATUS:START -->
 **System status:** 🟡 attention needed · updated 2026-11-14 21:45 UTC
 <!-- STATUS:END -->
 
----
+Tools for markets, networks, and the people who run them. Built in public by [@0xzoz](https://github.com/0xzoz).
 
-The permanent underclass debates whether AI will take their jobs.  
-The permanent upper class builds the AI.
+## Products
 
----
+**[Maker](https://github.com/P-U-C/aftermath-maker)** · [maker.permanentupperclass.com](https://maker.permanentupperclass.com)
+Self-hosted market making on Aftermath perpetuals (Sui). Local signing, hard risk limits, and the exact transaction behind every live action. The repo is public for independent audit review.
 
-## What we build
+**[capable](https://github.com/P-U-C/Capable)** · [open the app](https://p-u-c.github.io/Capable/)
+Short, swipeable lessons on starting a community that lasts, and on being a good member of one. Free, no account.
 
-Sovereign systems for people who understand that **leverage compounds**.
+**[The Disciples](https://github.com/P-U-C/farcaster-disciples)** · [disciples.permanentupperclass.com](https://disciples.permanentupperclass.com)
+A reproducible onchain ledger of Farcaster OG holders who signed the Network School pledge. Refreshed daily.
 
-Capital compounds. Knowledge compounds. Infrastructure compounds. The gap between those who build the tools and those who use them is not closing — it is widening, faster than most can perceive.
+**[In Three](https://github.com/P-U-C/farcaster-in-three)** · [farcaster.permanentupperclass.com](https://farcaster.permanentupperclass.com/)
+Run your own Farcaster Snapchain node and client in three commands.
 
-We build on the right side of that gap.
+## Networks
 
----
+**[Post Fiat validator](https://github.com/P-U-C/pft-validator)** · [pft.permanentupperclass.com](https://pft.permanentupperclass.com)
+The validator's front desk: domain attestation, lens, herald. Feeds refresh hourly.
 
-## The system at a glance
+**[awesome-technocore](https://github.com/P-U-C/awesome-technocore)**
+A daily index of Technocore agent work for FLOP participation.
 
-Four layers. Raw signals feed a **corpus layer** — the moat. Thin **surfaces** ride on the corpus. The surfaces generate **revenue**. The corpus is the product; the newsletters, bots, and APIs are only where it surfaces. Own the corpus, rent distribution until the audience exists.
+## Research, paper only
 
-```mermaid
-flowchart TB
-  SIG["Raw signals<br/>RSS · Reddit · Google rising · TikTok · Places · filings · options · surveys"]
-
-  subgraph CORPUS["Corpus layer — the moat"]
-    direction LR
-    TC["trend-corpus<br/>what is happening"]
-    SC["swell-checker<br/>what is rising"]
-    AC["audience-corpus<br/>who you are talking to · planned"]
-  end
-
-  subgraph SURFACES["Surfaces — thin layers on the corpus"]
-    direction LR
-    FS["Foreshore"]
-    CV["Convergence Daily"]
-    ENG["convergence-hq<br/>dual-publishing engine<br/>The Brief + The Signal"]
-    TB["trading book + scanner"]
-    BG["business-guy"]
-    API["MCP / API"]
-  end
-
-  REV["Revenue<br/>subscriptions · trading P&L · research fees · API access · ventures"]
-
-  SIG --> TC
-  SIG --> SC
-  SIG --> AC
-  SC --> FS
-  TC --> CV
-  TC --> TB
-  TC --> API
-  SC --> API
-  CV --> ENG
-  ENG --> API
-  AC -. render for cohort .-> FS
-  AC -. render for cohort .-> CV
-  AC -. target .-> BG
-  FS -. idea .-> BG
-  CV -. idea .-> BG
-  TB -. provenance .-> CV
-  FS --> REV
-  CV --> REV
-  TB --> REV
-  BG --> REV
-  API --> REV
-```
-
-The moat is never any single newsletter or bot — it is the corpus every surface rides on. Signals deepen the corpus, the corpus feeds the surfaces, the surfaces grow an audience and throw off ideas, and that funds wider signal coverage. Compounding, by construction.
+**[trend-corpus](https://github.com/P-U-C/trend-corpus)** — sources to claims to theses to decision packets, with a human-review gate before anything executes.
+**[puc-trading](https://github.com/P-U-C/puc-trading)** — options scanner and paper journal. No live capital until the 30-trade / 30-day gate clears.
 
 ---
 
-## Trading + signal intelligence
+[Portfolio map](https://github.com/P-U-C/.github/blob/main/docs/portfolio.md) · [Archive](https://github.com/P-U-C/.github/blob/main/docs/archive.md) · [Reset log](https://github.com/P-U-C/.github/blob/main/docs/portfolio-reset.md)
 
-**[trend-corpus](https://github.com/P-U-C/trend-corpus)** — the public sector-corpus  
-14 themes. Sources → claims → entities → theses → decision packets → daily aggregates. Schema-validated. Public by construction.
-
-**[puc-trading](https://github.com/P-U-C/puc-trading)** — LLM Convergence Options Scanner + Trade Journal  
-The private trading runtime. Convergence merger, catalyst calendar, mispricing detector, two-bucket paper book (income + lottery), 7-phase transactional orchestrator. Paper-only until the 30-trade / 30-day gate clears.
-
-**[trend-intel-private](https://github.com/P-U-C/trend-intel-private)** — semi-private bridge  
-Sanitized claim text, entity-to-ticker exposure, opportunity rows. The layer between live private runtimes and the public scanner artifact contract.
-
----
-
-## Consumer + editorial distribution
-
-**[swell-checker](https://github.com/P-U-C/swell-checker)** — consumer / health trend discovery
-Velocity + spread + vocabulary scoring across RSS, Reddit, Google rising, TikTok, and Places. Operator-gated proposals. The "what is rising" corpus.
-
-**[editorial](https://github.com/P-U-C/editorial)** — the publishing layer *(private)*
-Two products on top of the corpuses. **Foreshore** — health-sector trend intelligence, for operators who want the shape of a thing before their peers do. **Convergence Daily** — cross-sector market intelligence, synthesized from the sector corpuses and the scanner. Every issue ships twice: a human story and a machine-readable JSON artifact.
-
-**[convergence-hq/convergence](https://github.com/convergence-hq/convergence)** — the dual-publishing engine
-Read by humans, cited by machines. One canonical object compiles into two coordinated surfaces: **The Brief** (a fast human reading site) and **The Signal** (an immutable, content-addressed, cryptographically signed JSON object that agents can cite *and verify*). Convergence Daily is the first publication wired through it; the engine is forkable, so any publication can adopt the same dual-native contract.
-
-**[business-guy](https://github.com/P-U-C/business-guy)** — opportunity research + outreach *(private)*
-Takes the business and trade ideas the corpus surfaces and researches them — market size, incumbents, feasibility — turning a one-line read into a validated brief.
-
-**[wellness-radar](https://github.com/P-U-C/wellness-radar)** — Metro Vancouver wellness market-intelligence console
-A vertical surface: map-first operator map + live signal feed + people graph + white-space/opportunity analytics for the Metro Vancouver wellness economy, lead wedge recovery / contrast therapy. Source-backed public data only, BC-geo-gated, with provenance and freshness on every record. The pattern is forkable to any city + sector.
-
-**audience-corpus** *(planned)* — the third corpus: who you are talking to
-A living corpus of each demographic cohort's fears, hopes, drivers, and language, exposed as composable targeting infrastructure. Horizontal — it feeds both the editorial surfaces and business-guy.
-
----
-
-## Post Fiat infrastructure
-
-**[pft-validator](https://github.com/P-U-C/pft-validator)** — PFT validator dashboard + domain verification  
-**[lens](https://github.com/P-U-C/pft-validator/tree/main/lens)** — the public validator lens: graph + audit + auth feeds  
-**[herald](https://github.com/P-U-C/pft-validator/tree/main/herald)** — Post Fiat task / subs / forensics delivery  
-**[pft-audit](https://github.com/P-U-C/pft-audit)** — task audit trails + reasoning chains (private)  
-**[pf-monitor](https://github.com/P-U-C/pf-monitor)** — Prometheus + Grafana + Alertmanager for PF validators  
-**[pf-scout-bot](https://github.com/P-U-C/pf-scout-bot)** — conversational scout bot for the Post Fiat Task Node  
-**[pf-scout](https://github.com/P-U-C/pf-scout)** — composable contributor-recruitment database  
-**[awesome-postfiat](https://github.com/P-U-C/awesome-postfiat)** — community reference
-
----
-
-## b1e55ed -- sovereign trading intelligence
-
-**[b1e55ed](https://github.com/P-U-C/b1e55ed)** — the system  
-Event-sourced. Self-calibrating. Auditable by construction.
-
-**[city](https://github.com/P-U-C/city)** — special economic zone, multi-agent architecture
-
----
-
-## Agent payment + accountability primitives
-
-**[rcpt](https://github.com/P-U-C/rcpt)** / **[pympp](https://github.com/P-U-C/pympp)** — the accountability primitive for the agent economy  
-**[safetymd](https://github.com/P-U-C/safetymd)** — the trust standard for agent payments. Check before you pay.  
-**[openclaw-skills](https://github.com/P-U-C/openclaw-skills)** — operator skills for b1e55ed + the PUC ecosystem  
-**[agentify](https://github.com/P-U-C/agentify)** — bootstrap any repo to code like the Anthropic team  
-**[review-council](https://github.com/P-U-C/review-council)** — generic multi-reviewer code review system
-
----
-
-## Kindling — agent economy infrastructure
-
-**[kind-ling.com](http://kind-ling.com/)** • **[github.com/kind-ling](https://github.com/kind-ling)**
-
-**[flint](https://github.com/kind-ling/flint)** — agent social growth engine. Optimize for LLM inference decisions, not human engagement intuition.  
-**[twig](https://github.com/kind-ling/twig)** — MCP tool description optimizer. Agents choose you or they don't. Twig makes them choose you.  
-**[heat](https://github.com/kind-ling/heat)** — reputation-weighted agent and service routing oracle. x402-gated on Base.  
-**[igniter](https://github.com/kind-ling/igniter)** — x402 + MCP + A2A scaffolding for any agent service  
-**[docs](https://github.com/kind-ling/docs)** — agent economy infrastructure documentation
-
----
-
-Compounding is quiet. That is how you know it is working.
+Compounding is quiet.
